@@ -2,7 +2,7 @@ class Solution {
     public int peakIndexInMountainArray(int[] nums) {
         //using binary search concept
         int n= nums.length;
-        int lo=1, hi=n-2;
+        int lo=1, hi=n-2;       //cuz 1st and last element cant be peak
         int mid;
         while(lo<=hi){
             mid=(lo+hi)/2;
