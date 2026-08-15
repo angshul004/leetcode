@@ -2,8 +2,8 @@ class Solution {
     public int mySqrt(int x) {
         //return (int) (Math.sqrt(x));  <-fastest way. uses newton raphson method
 
-        //0<=sqrt(x)<=x
-        //using binary search concept
+        //hint: 0<=sqrt(x)<=x
+        //using binary search concept. also using long because mid*mid will cause int overflow.
 
         long lo=0, hi=(long)x;
         long mid;
@@ -15,13 +15,11 @@ class Solution {
             }
             else if(mid*mid<x){
                 lo=mid+1;
-                sqrtint=mid;
             }
             else if(mid*mid == x){
                 return (int)mid;
             }
-
         }
-        return (int)sqrtint;
+        return (int)hi;
     }
 }
