@@ -1,7 +1,7 @@
 class Solution {
     public int search(int[] nums, int target) {
         //using binary search concept.
-        //compare the mid with last element to know if we are in left sorted part or right sorted part (or left/right of highest element).
+        //compare the nums[mid] with last element to know if we are in left sorted part or right sorted part (means left/right subarr of largest element(pivot) ).
         int n=nums.length;
         int lo=0, hi=n-1;
         int mid;
@@ -11,7 +11,7 @@ class Solution {
             mid=(hi+lo)/2;
             if(nums[mid]==target) return mid;
 
-            boolean midInLeft = nums[mid] > nums[n-1]; //true if we are in left subarr
+            boolean midInLeft = nums[mid] > nums[n-1]; //true means we are in left subarr
             if(midInLeft == targetInLeft){ // Both target and mid are in same subarr
                 if(nums[mid]>target){   //normal binary search
                     hi=mid-1;
