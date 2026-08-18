@@ -12,7 +12,7 @@ class Solution {
 
         int n=nums.length;
         int lo=1, hi=max, mid; //we have to find the ans between 1 to max 
-        int ans=1;
+        int ans=max;
 
         while(lo<=hi){
             mid=(lo+hi)/2;
@@ -27,7 +27,7 @@ class Solution {
                 lo=mid+1; //we need to divide by bigger number
             }
             else if(sum<=threshold){
-                hi=mid-1; //mid can be possible ans, but check also using smaller no
+                hi=mid-1; //mid can be possible ans but check also using smaller no
                 ans=mid;
             }
 
