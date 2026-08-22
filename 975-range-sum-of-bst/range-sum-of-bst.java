@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    //static int sum=0;
+    //no need of traversing whole tree. if inside range then return the value adding with recursion to left and right nodes. else if smaller than range, go right. if bigger than range go left. base case is if reached the end return 0.
     public int rangeSumBST(TreeNode root, int low, int high) {
         if(root==null) return 0;
         if(root.val>=low && root.val<=high){
