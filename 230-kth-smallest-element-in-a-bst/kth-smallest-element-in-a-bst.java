@@ -22,7 +22,9 @@ class Solution {
         return soln.get(k-1);
     }
     public void inorder(TreeNode root, int k){
-        if(root==null || soln.size()==k) return;
+        if(soln.size()==k) return;
+        
+        if(root==null) return;
         inorder(root.left,k);
         soln.add(root.val);
         inorder(root.right,k);
