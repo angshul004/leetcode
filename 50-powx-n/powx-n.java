@@ -13,6 +13,6 @@ class Solution {
 
         double ans = pow(x,n/2);        //this makes TC O(logn)
         if(n%2==0) return ans*ans;
-        else return ans*ans*x;
+        else return ans*ans*x;      //every power will hit this line when power becomes 1
     }
 }
