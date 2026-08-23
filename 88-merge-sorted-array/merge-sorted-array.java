@@ -13,21 +13,21 @@ class Solution {
                 k++;
             }
         }
-        
+        //when some items left in nums1
         while(i<m){
             arr[k]=nums1[i];
             i++;
             k++;
         }
         
- 
+        //when some items left in nums2
         while(j<n){
             arr[k]=nums2[j];
             j++;
             k++;
         }
 
-
+        //moving all from arr to nums1
         for(int x=0; x<(m+n);x++){
             nums1[x]=arr[x];
         }
