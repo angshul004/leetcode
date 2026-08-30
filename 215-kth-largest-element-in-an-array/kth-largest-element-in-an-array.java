@@ -10,10 +10,10 @@ class Solution {
     }
     public void quickselect(int[] arr, int lo, int hi, int neededIdx){
         if(lo>hi) return;
-        if (lo == hi) {
-            soln = arr[lo];
-            return;
-        }
+        // if (lo == hi) {
+        //     soln = arr[lo];
+        //     return;
+        // }
         
         int pividx= partition(arr, lo, hi);
         if(pividx > neededIdx) quickselect(arr, lo, pividx-1, neededIdx);
