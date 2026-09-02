@@ -14,7 +14,8 @@ class Solution {
         int soln=0;
         while(lo<=hi){
             mid=(lo+hi)/2;
-            int calculatedDays = calculateDays(mid, weights);
+            int calculatedDays = calculateDays(mid, weights);//calculating days needed to ship with 'mid' capacity
+            
             if(days >= calculatedDays){ //mid capacity is ok to ship. but still check in lower capacity to utilize all days
                 soln=mid;
                 hi=mid-1;
