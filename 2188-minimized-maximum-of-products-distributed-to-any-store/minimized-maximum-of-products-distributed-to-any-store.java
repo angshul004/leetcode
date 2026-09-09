@@ -26,7 +26,7 @@ class Solution {
         for(int i=0; i<qua.length; i++){
             //storeNeeded += (int)Math.ceil( (float) qua[i]/x );   <-slow
             //to get no of store needed for ith product
-            storeNeeded += (qua[i] + x - 1) / x;
+            storeNeeded += (qua[i] + x - 1) / x; //ceiling division (fast)
         }
         if(storeNeeded>n) return true;
         else return false;
