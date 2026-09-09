@@ -21,12 +21,12 @@ class Solution {
         return x;
     }
 
-    public boolean isStoreExceed(int mid, int n, int[] qua){
+    public boolean isStoreExceed(int x, int n, int[] qua){
         int storeNeeded=0;
         for(int i=0; i<qua.length; i++){
-            //storeNeeded += (int)Math.ceil( (float)qua[i]/mid); <-slow
+            //storeNeeded += (int)Math.ceil( (float) qua[i]/x );   <-slow
             //to get no of store needed for ith product
-            storeNeeded += (qua[i] + mid - 1) / mid;
+            storeNeeded += (qua[i] + x - 1) / x;
         }
         if(storeNeeded>n) return true;
         else return false;
