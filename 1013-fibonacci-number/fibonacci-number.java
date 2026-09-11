@@ -8,7 +8,7 @@ class Solution {
         return ans;
     }
     public int fib(int n) {
-        /* normal way:
+        /* bottom up / tabulation approach (without array - space optimized):
         if(n<=1) return n;
         int n0=0, n1=1;
         int sum=0;
@@ -20,7 +20,7 @@ class Solution {
         return sum;
         */
 
-        // dynamic programming: (top down / memoization)
+        // dynamic programming: (top down / memoization approach)
         int[] arr = new int[n+1];    //need index values 0 to n
         return fibdp(n, arr);
     }
