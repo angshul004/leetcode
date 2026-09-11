@@ -1,10 +1,9 @@
 class Solution {
-    static int[] arr;
-    public int fibdp(int n){
+    public int fibdp(int n, int[] arr){
         if(n<=1) return n;  //base case
         if(arr[n]!=0) return arr[n];
 
-        int ans= fibdp(n-1)+fibdp(n-2);
+        int ans= fibdp(n-1, arr)+fibdp(n-2, arr);
         arr[n]=ans;
         return ans;
     }
@@ -21,8 +20,8 @@ class Solution {
         return sum;
         */
 
-        // dynamic programming:
-        arr = new int[n+1];    //need index values 0 to n
-        return fibdp(n);
+        // dynamic programming: (top down / memoization)
+        int[] arr = new int[n+1];    //need index values 0 to n
+        return fibdp(n, arr);
     }
 }
